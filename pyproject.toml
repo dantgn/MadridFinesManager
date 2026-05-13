@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "MadridFinesManager"
+version = "0.0.1"
+authors = [
+  { name="Daniel Alvarez", email="dan.alvarez7@gmail.com" }
+]
+
+description = "Manage and Analyse public traffic fines data from Madrid City Hall"
+requires-python = ">=3.14"
+
+dependencies = [
+    "pandas ~= 3.0.1",
+    "requests ~= 2.32.5",
+    "matplotlib ~= 3.10.8",
+    "numpy ~= 2.4.3",
+    "beautifulsoup4 ~= 4.14.3",
+]
+
+license = "MIT"
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest ~= 9.0.2",
+    "pytest-cov ~= 7.1.0",
+    "pytest-mock ~= 3.15.1",
+    "requests-mock ~= 1.12.1",
+    "freezegun ~= 1.5.5",
+]
+
+[tool.setuptools.packages.find]
+include = ["traffic_fines"]
+exclude = ["tests*"]
+
