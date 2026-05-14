@@ -49,3 +49,12 @@ $ pytest tests/test_madrid_fines.py
 - I decided to implement the Cache class with the option to initialize it by defining the base cache directory, to provide greater flexibility. However, it is not necessary to pass this argument, and by default it will initialize to Path.home() / ".my_cache". 
 - To define class private attributes, I implemented them as strict private attributes, with getters to allow reading values both inside and outside the class, but without setters, so that values can only be modified from within the class. 
 - In the Add method of the MadridFines class, when no month is specified and we attempt to add all months present in a given year, if an error occurs, we catch the exception, log a warning, and continue adding the next month.
+
+## How it works
+
+To understand how it works, please check the Jupyter notebook [how_it_works.ipynb](how_it_works.ipynb), where the creation and usage of the `Cache`, `CacheUrl`, and `MadridFines` classes are detailed with multiple examples.
+
+Please Note that you might need to install jupyter package
+```
+python3 -m pip install jupyter
+```
